@@ -1,0 +1,422 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiChunkedBitmapCtrl(SceneSelectGui) {
+   canSaveDynamicFields = "0";
+   Profile = "GuiContentProfile";
+   HorizSizing = "width";
+   VertSizing = "height";
+   position = "0 0";
+   Extent = "800 600";
+   MinExtent = "8 8";
+   canSave = "1";
+   Visible = "1";
+   hovertime = "1000";
+   bitmap = "./background";
+   useVariable = "0";
+   tile = "0";
+
+   new GuiControl() {
+      canSaveDynamicFields = "0";
+      Profile = "GuiWindowProfile";
+      HorizSizing = "center";
+      VertSizing = "center";
+      position = "257 519";
+      Extent = "459 63";
+      MinExtent = "8 8";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+
+      new GuiScrollCtrl() {
+         canSaveDynamicFields = "0";
+         Profile = "GuiScrollProfile";
+         HorizSizing = "right";
+         VertSizing = "bottom";
+         position = "101 11";
+         Extent = "309 43";
+         MinExtent = "8 8";
+         canSave = "1";
+         Visible = "1";
+         hovertime = "1000";
+         willFirstRespond = "1";
+         hScrollBar = "dynamic";
+         vScrollBar = "alwaysOn";
+         constantThumbHeight = "0";
+         childMargin = "0 0";
+
+         new GuiTextListCtrl(SM_sceneList) {
+            canSaveDynamicFields = "0";
+            Profile = "GuiTextArrayProfile";
+            HorizSizing = "right";
+            VertSizing = "bottom";
+            position = "2 2";
+            Extent = "287 144";
+            MinExtent = "8 8";
+            canSave = "1";
+            Visible = "1";
+            hovertime = "1000";
+            enumerate = "0";
+            resizeCell = "1";
+            columns = "0";
+            fitParentWidth = "1";
+            clipColumnText = "0";
+         };
+      };
+      new GuiTextEditCtrl() {
+         canSaveDynamicFields = "0";
+         Profile = "GuiTextEditProfile";
+         HorizSizing = "right";
+         VertSizing = "bottom";
+         position = "11 29";
+         Extent = "86 18";
+         MinExtent = "8 8";
+         canSave = "1";
+         Visible = "1";
+         Variable = "pref::Player::Name";
+         hovertime = "1000";
+         maxLength = "255";
+         historySize = "0";
+         password = "0";
+         tabComplete = "0";
+         sinkAllKeyEvents = "0";
+         password = "0";
+         passwordMask = "*";
+      };
+      new GuiTextCtrl() {
+         canSaveDynamicFields = "0";
+         Profile = "GuiTextProfile";
+         HorizSizing = "right";
+         VertSizing = "bottom";
+         position = "16 9";
+         Extent = "63 18";
+         MinExtent = "8 8";
+         canSave = "1";
+         Visible = "1";
+         hovertime = "1000";
+         text = "Player Name:";
+         maxLength = "255";
+      };
+   };
+   new GuiBitmapCtrl() {
+      canSaveDynamicFields = "0";
+      Profile = "GuiDefaultProfile";
+      HorizSizing = "right";
+      VertSizing = "bottom";
+      position = "8 10";
+      Extent = "242 578";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+      bitmap = "./SceneListBg.png";
+      wrap = "0";
+   };
+   new GuiBitmapCtrl() {
+      canSaveDynamicFields = "0";
+      Profile = "GuiDefaultProfile";
+      HorizSizing = "right";
+      VertSizing = "bottom";
+      position = "277 -7";
+      Extent = "504 236";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+      bitmap = "./RoleInfoBg.png";
+      wrap = "0";
+   };
+   new GuiBitmapCtrl() {
+      canSaveDynamicFields = "0";
+      Profile = "GuiDefaultProfile";
+      HorizSizing = "right";
+      VertSizing = "bottom";
+      position = "271 267";
+      Extent = "530 227";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+      bitmap = "./SceneInfoBg.png";
+      wrap = "0";
+   };
+   new GuiBitmapCtrl() {
+      canSaveDynamicFields = "0";
+      Profile = "GuiDefaultProfile";
+      HorizSizing = "right";
+      VertSizing = "bottom";
+      position = "540 17";
+      Extent = "230 209";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+      bitmap = "./RoleFace.png";
+      wrap = "0";
+   };
+   new GuiBitmapCtrl() {
+      canSaveDynamicFields = "0";
+      Profile = "GuiDefaultProfile";
+      HorizSizing = "right";
+      VertSizing = "bottom";
+      position = "33 29";
+      Extent = "193 189";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+      bitmap = "./Logo.png";
+      wrap = "0";
+   };
+   new GuiTextCtrl() {
+      canSaveDynamicFields = "0";
+      Profile = "GuiTextProfile";
+      HorizSizing = "right";
+      VertSizing = "bottom";
+      position = "40 243";
+      Extent = "48 18";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+      text = "选择场景";
+      maxLength = "1024";
+   };
+   new GuiTextCtrl() {
+      canSaveDynamicFields = "0";
+      Profile = "GuiTextProfile";
+      HorizSizing = "right";
+      VertSizing = "bottom";
+      position = "0 0";
+      Extent = "8 18";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+      maxLength = "1024";
+   };
+   new GuiTextCtrl(ta_roleProfile) {
+      canSaveDynamicFields = "0";
+      Profile = "GuiTextProfile";
+      HorizSizing = "right";
+      VertSizing = "bottom";
+      position = "289 31";
+      Extent = "48 18";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+      text = "人物简介";
+      maxLength = "1024";
+   };
+   new GuiTextCtrl(ta_sceneInfo) {
+      canSaveDynamicFields = "0";
+      Profile = "GuiTextProfile";
+      HorizSizing = "right";
+      VertSizing = "bottom";
+      position = "303 302";
+      Extent = "92 18";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+      text = "Scene Info Content";
+      maxLength = "1024";
+   };
+   new GuiTextCtrl() {
+      canSaveDynamicFields = "0";
+      Profile = "GuiTextProfile";
+      HorizSizing = "right";
+      VertSizing = "bottom";
+      position = "274 243";
+      Extent = "48 18";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+      text = "山峰介绍";
+      maxLength = "1024";
+   };
+   new GuiTextCtrl(lbl_SelectedScene) {
+      canSaveDynamicFields = "0";
+      Profile = "GuiTextProfile";
+      HorizSizing = "right";
+      VertSizing = "bottom";
+      position = "304 277";
+      Extent = "53 18";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+      text = "Barebones";
+      maxLength = "1024";
+   };
+   new GuiBitmapButtonTextCtrl(btn_mountQingcheng) {
+      canSaveDynamicFields = "0";
+      Profile = "GuiDefaultProfile";
+      HorizSizing = "right";
+      VertSizing = "bottom";
+      position = "57 285";
+      Extent = "190 36";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+      text = "                           青城山";
+      groupNum = "-1";
+      buttonType = "PushButton";
+      bitmap = "./SceneNameBg.png";
+   };
+   new GuiBitmapButtonTextCtrl(btn_jadeDragonSnowMountain) {
+      canSaveDynamicFields = "0";
+      Profile = "GuiDefaultProfile";
+      HorizSizing = "right";
+      VertSizing = "bottom";
+      position = "60 341";
+      Extent = "190 36";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+      text = "                       玉龙雪山";
+      groupNum = "-1";
+      buttonType = "PushButton";
+      bitmap = "./SceneNameBg.png";
+   };
+   new GuiBitmapButtonTextCtrl(btn_mountEverRest) {
+      canSaveDynamicFields = "0";
+      Profile = "GuiDefaultProfile";
+      HorizSizing = "right";
+      VertSizing = "bottom";
+      position = "60 401";
+      Extent = "190 36";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+      text = "                      珠穆朗玛峰";
+      groupNum = "-1";
+      buttonType = "PushButton";
+      bitmap = "./SceneNameBg.png";
+   };
+   new GuiBitmapButtonTextCtrl() {
+      canSaveDynamicFields = "0";
+      Profile = "GuiDefaultProfile";
+      HorizSizing = "right";
+      VertSizing = "bottom";
+      position = "530 488";
+      Extent = "109 40";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      Command = "Canvas.setContent(MainMenuGui);";
+      hovertime = "1000";
+      text = "                返回";
+      groupNum = "-1";
+      buttonType = "PushButton";
+      bitmap = "./BackBtn.png";
+   };
+   new GuiBitmapButtonTextCtrl(btn_start) {
+      canSaveDynamicFields = "0";
+      Profile = "GuiDefaultProfile";
+      HorizSizing = "right";
+      VertSizing = "bottom";
+      position = "671 488";
+      Extent = "109 40";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      Command = "SM_StartMission();";
+      hovertime = "1000";
+      text = "            开始";
+      groupNum = "-1";
+      buttonType = "PushButton";
+      bitmap = "./StartBtn.png";
+   };
+};
+//--- OBJECT WRITE END ---
+
+
+//----------------------------------------
+function btn_mountQingcheng::click()
+{
+	SelectedScene.Text = "ClimbGame/data/missions/MountQingcheng" ;
+}
+
+function btn_jadeDragonSnowMountain::click()
+{
+	SelectedScene.Text = "ClimbGame/data/missions/JadeDragonSnowMountain" ;
+}
+
+function btn_mountEverRest::click()
+{
+	SelectedScene.Text = "ClimbGame/data/missions/MountEverRest" ;
+}
+
+function SM_StartMission()
+{
+   %mission = lbl_selectedScene.Text;
+   %mission = "ClimbGame/data/missions/MountEverRest.mis";
+   echo(lbl_selectedScene.Text);
+   %serverType = "SinglePlayer";
+
+   createServer(%serverType, %mission);
+   %conn = new GameConnection(ServerConnection);
+   RootGroup.add(ServerConnection);
+   %conn.setConnectArgs($pref::Player::Name);
+   %conn.setJoinPassword($Client::Password);
+   %conn.connectLocal();
+}
+
+
+//----------------------------------------
+function SceneSelectGui::onWake()
+{
+   SM_sceneList.clear();
+   %i = 0;
+   for(%file = findFirstFile($Server::MissionFileSpec); %file !$= ""; %file = findNextFile($Server::MissionFileSpec))  
+      if (strStr(%file, "/CVS/") == -1)
+         SM_sceneList.addRow(%i++, getMissionDisplayName(%file) @ "\t" @ %file );
+   SM_sceneList.sort(0);
+   SM_sceneList.setSelectedRow(0);
+   SM_sceneList.scrollVisible(0);
+}   
+
+
+//----------------------------------------
+function getMissionDisplayName( %missionFile ) 
+{
+   %file = new FileObject();
+   
+   %MissionInfoObject = "";
+   
+   if ( %file.openForRead( %missionFile ) ) {
+		%inInfoBlock = false;
+		
+		while ( !%file.isEOF() ) {
+			%line = %file.readLine();
+			%line = trim( %line );
+			
+			if( %line $= "new ScriptObject(MissionInfo) {" )
+				%inInfoBlock = true;
+			else if( %inInfoBlock && %line $= "};" ) {
+				%inInfoBlock = false;
+				%MissionInfoObject = %MissionInfoObject @ %line; 
+				break;
+			}
+			
+			if( %inInfoBlock )
+			   %MissionInfoObject = %MissionInfoObject @ %line @ " "; 	
+		}
+		
+		%file.close();
+	}
+	%MissionInfoObject = "%MissionInfoObject = " @ %MissionInfoObject;
+	eval( %MissionInfoObject );
+	
+   %file.delete();
+
+   if( %MissionInfoObject.name !$= "" )
+      return %MissionInfoObject.name;
+   else
+      return fileBase(%missionFile); 
+}
+

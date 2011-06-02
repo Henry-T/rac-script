@@ -1,0 +1,13 @@
+$Pref::Server::AdminPassword = "";
+$Pref::Server::BanTime = 1800;
+$Pref::Server::ConnectionError = "你的登山游戏版本不正确，或者游戏资源文件缺失。请联系作者LoloFinil：tang-hy@live.com以获取更多信息";
+$Pref::Server::FloodProtectionEnabled = 1;
+$Pref::Server::Info = "这是登山游戏的测试服务器";
+$Pref::Server::KickBanTime = 300;
+$Pref::Server::MaxChatLen = 120;
+$Pref::Server::MaxPlayers = 64;
+$Pref::Server::Name = "Climb Game";
+$Pref::Server::Password = "";
+$Pref::Server::Port = 28000;
+$Pref::Server::RegionMask = 2;
+$Pref::Server::TimeLimit = 20;
