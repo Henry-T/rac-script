@@ -1,0 +1,119 @@
+//--- OBJECT WRITE BEGIN ---
+new GuiChunkedBitmapCtrl(MainMenuGui) {
+   canSaveDynamicFields = "0";
+   Profile = "GuiContentProfile";
+   HorizSizing = "width";
+   VertSizing = "height";
+   position = "0 0";
+   Extent = "800 600";
+   MinExtent = "8 8";
+   canSave = "1";
+   Visible = "1";
+   hovertime = "1000";
+   bitmap = "./MainMenuBg";
+   useVariable = "0";
+   tile = "0";
+
+   new GuiButtonCtrl() {
+      canSaveDynamicFields = "0";
+      Profile = "GuiButtonProfile";
+      HorizSizing = "right";
+      VertSizing = "top";
+      position = "636 556";
+      Extent = "110 20";
+      MinExtent = "8 8";
+      canSave = "1";
+      Visible = "1";
+      Command = "quit();";
+      hovertime = "1000";
+      text = "Quit!";
+      groupNum = "-1";
+      buttonType = "PushButton";
+   };
+   new GuiButtonCtrl() {
+      canSaveDynamicFields = "0";
+      Profile = "GuiButtonProfile";
+      HorizSizing = "right";
+      VertSizing = "top";
+      position = "637 491";
+      Extent = "110 20";
+      MinExtent = "8 8";
+      canSave = "1";
+      Visible = "1";
+      Command = "Canvas.setContent(SceneSelectGui);";
+      hovertime = "1000";
+      text = "Start Mission...";
+      groupNum = "-1";
+      buttonType = "PushButton";
+   };
+   new GuiButtonCtrl() {
+      canSaveDynamicFields = "0";
+      Profile = "GuiButtonProfile";
+      HorizSizing = "right";
+      VertSizing = "top";
+      position = "636 513";
+      Extent = "110 20";
+      MinExtent = "8 8";
+      canSave = "1";
+      Visible = "1";
+      Command = "Canvas.pushDialog(optionsDlg);";
+      hovertime = "1000";
+      text = "Options...";
+      groupNum = "-1";
+      buttonType = "PushButton";
+   };
+   new GuiButtonCtrl() {
+      canSaveDynamicFields = "0";
+      Profile = "GuiButtonProfile";
+      HorizSizing = "right";
+      VertSizing = "top";
+      position = "636 534";
+      Extent = "110 20";
+      MinExtent = "8 8";
+      canSave = "1";
+      Visible = "1";
+      Command = "getHelp(\"1. About\");";
+      hovertime = "1000";
+      text = "About...";
+      groupNum = "-1";
+      buttonType = "PushButton";
+   };
+   new GuiBitmapButtonTextCtrl() {
+      canSaveDynamicFields = "0";
+      Profile = "GuiDefaultProfile";
+      HorizSizing = "right";
+      VertSizing = "bottom";
+      position = "36 461";
+      Extent = "140 30";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      Command = "Canvas.setContent(SceneSelectGui);";
+      hovertime = "1000";
+      text = "                    开始";
+      groupNum = "-1";
+      buttonType = "PushButton";
+      bitmap = "./Start.png";
+   };
+   new GuiBitmapButtonTextCtrl() {
+      canSaveDynamicFields = "0";
+      Profile = "GuiDefaultProfile";
+      HorizSizing = "right";
+      VertSizing = "bottom";
+      position = "37 490";
+      Extent = "140 30";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      Command = "quit();";
+      hovertime = "1000";
+      text = "                    退出";
+      groupNum = "-1";
+      buttonType = "PushButton";
+      bitmap = "./Quit.png";
+   };
+};
+//--- OBJECT WRITE END ---
+
+
+

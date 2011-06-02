@@ -1,0 +1,311 @@
+
+
+//--- OBJECT WRITE BEGIN ---
+new GuiBitmapCtrl(InGameGui) {
+   canSaveDynamicFields = "0";
+   Profile = "GuiDefaultProfile";
+   HorizSizing = "right";
+   VertSizing = "bottom";
+   position = "0 0";
+   Extent = "800 600";
+   MinExtent = "8 2";
+   canSave = "1";
+   Visible = "1";
+   hovertime = "1000";
+   bitmap = "./background.png";
+   wrap = "0";
+
+   new GameTSCtrl() {
+      canSaveDynamicFields = "1";
+      Profile = "GuiContentProfile";
+      HorizSizing = "right";
+      VertSizing = "bottom";
+      position = "256 61";
+      Extent = "508 440";
+      MinExtent = "8 8";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+      applyFilterToChildren = "1";
+      cameraZRot = "0";
+      forceFOV = "0";
+         helpTag = "0";
+         noCursor = "1";
+
+      new GuiBitmapCtrl(CenterPrintDlg) {
+         canSaveDynamicFields = "0";
+         Profile = "CenterPrintProfile";
+         HorizSizing = "center";
+         VertSizing = "center";
+         position = "-21 210";
+         Extent = "550 20";
+         MinExtent = "8 8";
+         canSave = "1";
+         Visible = "0";
+         hovertime = "1000";
+         bitmap = "./hudfill.png";
+         wrap = "0";
+
+         new GuiMLTextCtrl(CenterPrintText) {
+            canSaveDynamicFields = "0";
+            Profile = "CenterPrintTextProfile";
+            HorizSizing = "center";
+            VertSizing = "center";
+            position = "0 0";
+            Extent = "546 12";
+            MinExtent = "8 8";
+            canSave = "1";
+            Visible = "1";
+            hovertime = "1000";
+            lineSpacing = "2";
+            allowColorChars = "0";
+            maxChars = "-1";
+         };
+      };
+      new GuiBitmapCtrl(BottomPrintDlg) {
+         canSaveDynamicFields = "0";
+         Profile = "CenterPrintProfile";
+         HorizSizing = "center";
+         VertSizing = "top";
+         position = "-21 335";
+         Extent = "550 20";
+         MinExtent = "8 8";
+         canSave = "1";
+         Visible = "0";
+         hovertime = "1000";
+         bitmap = "./hudfill.png";
+         wrap = "0";
+
+         new GuiMLTextCtrl(BottomPrintText) {
+            canSaveDynamicFields = "0";
+            Profile = "CenterPrintTextProfile";
+            HorizSizing = "center";
+            VertSizing = "center";
+            position = "0 0";
+            Extent = "546 12";
+            MinExtent = "8 8";
+            canSave = "1";
+            Visible = "1";
+            hovertime = "1000";
+            lineSpacing = "2";
+            allowColorChars = "0";
+            maxChars = "-1";
+         };
+      };
+      new GuiBitmapCtrl(LagIcon) {
+         canSaveDynamicFields = "0";
+         Profile = "GuiDefaultProfile";
+         HorizSizing = "right";
+         VertSizing = "bottom";
+         position = "572 3";
+         Extent = "32 32";
+         MinExtent = "8 8";
+         canSave = "1";
+         Visible = "0";
+         hovertime = "1000";
+         bitmap = "./lagIcon.png";
+         wrap = "0";
+      };
+      new GuiShapeNameHud() {
+         canSaveDynamicFields = "0";
+         Profile = "GuiDefaultProfile";
+         HorizSizing = "width";
+         VertSizing = "height";
+         position = "303 142";
+         Extent = "105 188";
+         MinExtent = "8 8";
+         canSave = "1";
+         Visible = "1";
+         hovertime = "1000";
+         fillColor = "0 0 0 0.25";
+         frameColor = "0 1 0 1";
+         textColor = "0 1 0 0.939591";
+         showFill = "0";
+         showFrame = "0";
+         verticalOffset = "0.2";
+         distanceFade = "0.1";
+      };
+      new GuiHealthBarHud() {
+         canSaveDynamicFields = "0";
+         Profile = "GuiDefaultProfile";
+         HorizSizing = "right";
+         VertSizing = "top";
+         position = "14 275";
+         Extent = "26 138";
+         MinExtent = "8 8";
+         canSave = "1";
+         Visible = "1";
+         hovertime = "1000";
+         fillColor = "0 0 0 0.5";
+         frameColor = "0 1 0 0";
+         damageFillColor = "0.8 0 0 1";
+         pulseRate = "1000";
+         pulseThreshold = "0.5";
+         flipped = "0";
+         showFill = "1";
+         showFrame = "1";
+         displayEnergy = "0";
+      };
+      new GuiBitmapCtrl() {
+         canSaveDynamicFields = "0";
+         Profile = "GuiDefaultProfile";
+         HorizSizing = "right";
+         VertSizing = "top";
+         position = "11 259";
+         Extent = "32 172";
+         MinExtent = "8 8";
+         canSave = "1";
+         Visible = "1";
+         hovertime = "1000";
+         bitmap = "./healthBar";
+         wrap = "0";
+      };
+      new GuiHealthBarHud() {
+         canSaveDynamicFields = "0";
+         Profile = "GuiDefaultProfile";
+         HorizSizing = "right";
+         VertSizing = "top";
+         position = "53 275";
+         Extent = "26 138";
+         MinExtent = "8 8";
+         canSave = "1";
+         Visible = "1";
+         hovertime = "1000";
+         fillColor = "0 0 0 0.5";
+         frameColor = "0 1 0 0";
+         damageFillColor = "0 0 0.8 1";
+         pulseRate = "1000";
+         pulseThreshold = "0.5";
+         flipped = "0";
+         showFill = "1";
+         showFrame = "1";
+         displayEnergy = "1";
+      };
+      new GuiBitmapCtrl() {
+         canSaveDynamicFields = "0";
+         Profile = "GuiDefaultProfile";
+         HorizSizing = "right";
+         VertSizing = "top";
+         position = "50 259";
+         Extent = "32 172";
+         MinExtent = "8 8";
+         canSave = "1";
+         Visible = "1";
+         hovertime = "1000";
+         bitmap = "./healthBar";
+         wrap = "0";
+      };
+   };
+   new GuiTextCtrl() {
+      canSaveDynamicFields = "0";
+      Profile = "GuiTextProfile";
+      HorizSizing = "right";
+      VertSizing = "bottom";
+      position = "276 70";
+      Extent = "44 18";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+      text = "Strength:";
+      maxLength = "1024";
+   };
+   new GuiTextCtrl() {
+      canSaveDynamicFields = "0";
+      Profile = "GuiTextProfile";
+      HorizSizing = "right";
+      VertSizing = "bottom";
+      position = "266 89";
+      Extent = "54 18";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+      text = "Happiness:";
+      maxLength = "1024";
+   };
+   new GuiTextCtrl() {
+      canSaveDynamicFields = "0";
+      Profile = "GuiTextProfile";
+      HorizSizing = "right";
+      VertSizing = "bottom";
+      position = "599 74";
+      Extent = "32 18";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+      text = "Score:";
+      maxLength = "1024";
+   };
+   new GuiTextCtrl() {
+      canSaveDynamicFields = "0";
+      Profile = "GuiTextProfile";
+      HorizSizing = "right";
+      VertSizing = "bottom";
+      position = "641 74";
+      Extent = "8 18";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+      text = "0";
+      maxLength = "1024";
+   };
+   new GuiTextCtrl() {
+      canSaveDynamicFields = "0";
+      Profile = "GuiTextProfile";
+      HorizSizing = "right";
+      VertSizing = "bottom";
+      position = "325 69";
+      Extent = "18 18";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+      text = "100";
+      maxLength = "1024";
+   };
+   new GuiTextCtrl() {
+      canSaveDynamicFields = "0";
+      Profile = "GuiTextProfile";
+      HorizSizing = "right";
+      VertSizing = "bottom";
+      position = "324 88";
+      Extent = "18 18";
+      MinExtent = "8 2";
+      canSave = "1";
+      Visible = "1";
+      hovertime = "1000";
+      text = "100";
+      maxLength = "1024";
+   };
+};
+//--- OBJECT WRITE END ---
+
+
+//
+function UpdateInfo()
+{
+	// 数据交换定义
+	%roleStrength = 0;
+	%roleComfort = 0;
+	%roleInterest = 0;
+	%roleHappiness = 0;
+	
+	%envTemp = 0;
+	%envRainPower = 0;
+	%envDamp = 0;
+	
+	// %envWear= 0;
+	// %envSweat = 0;
+	// %env
+	%realStrengthConsume = 0;
+	
+	// 从服务器获取更新数据
+	serverCmdGetInGameInfo(%roleStrength, %roleComfort, %roleInterest, %roleHappiness, 
+													 %envTemp, %envRainPower, %envDamp, %realStrengthComsume);
+													 
+	// 将数据交给变量
+	lbl_
+}
